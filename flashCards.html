@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Flash</title>
+    <style>
+    .displayNone { display: none; }
+    </style>
+  </head>
+  <body>
+    <script>
+/**
+ * flashCards.html (javascript memorization tool)
+ * version: 0.5 (2014-07-28)
+ *
+ * This document is licensed as free software under the terms of the
+ * MIT License: http://www.opensource.org/licenses/mit-license.php
+ *
+ * Acknowledgements:
+ * Thanks to stackoverflow.com and w3schools.com
+ *
+ * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+ *
+              * Copyright (c) 2014 by Brent Neal Reeves
+ */
+    var myformat = 'M/d/yy h:mm:ss a';
+    var timer1;
+    var timer2;
+    var timeA=3;
+    var timeB=1;
+    var n = 0;
+    var windowSize = 3;
+    var wN = 0;
+    
+    var cardsInput='';
+    var cardsArray;
+    
+    var i = 0;
+    var item1 = "-+-";
+    var item2 = "";
+    var lines="0,s\n1,tie\n2,noah\n3,ma\n4,rye\n5,law\n6,shoe\n7,cow\n8,ivy\n9,bee";
+    
+    function nextN() {
+      wN += 1;
+      if (wN > windowSize) {
+        n = n - windowSize;
+        wN = 0;
+      };
+      n += 1;
+      if (n >= cardsArray.length) {
+        n = 0;
+      }
+      if (n < 0) {
+        n = cardsArray.length + n;
+      }
+      return n;
+    }
+    
+    function loadData() {
+      var txt = document.getElementById("lines").value.trim();
+      cardsArray = CSVToArray( txt );
+    }
+
+    function shuffleData() {
+      loadData();
+      shuffle(cardsArray);
+      redisplayLines();
+    }
+
+    function redisplayLines() {
+      var txt ="";
+      for (var i=0; i< cardsArray.length; i++) {
+        txt = txt + cardsArray[i][0] + "," + cardsArray[i][1] + "\n";
+      }
+      document.getElementById("lines").value = txt;
+    }
+    
+
+    function dumpData() {
+      console.log( document.getElementById("lines").value );
+    }
+
+    function dumpArray() {
+      var arrayLength = cardsArray.length;
+      console.log('Length: ' + arrayLength + ' n is ' + n);
+      for(var i=0; i< arrayLength; i++) {
+        console.log( i + ': ' + cardsArray[i][0] + ' is ' + cardsArray[i][1]);
+      }
+    }
+
+    function startFlow() {
+      // Don't start a new flow if we are already flowing
+      loadData();
+      if ( typeof timer1 !== 'undefined' ) 
+      {
+        return;
+      } else {
+        //
+      }
+      n=-1;
+      showA();
+    }
+    
+    
+    function stopFlow() {
+      if ( typeof timer1 === 'undefined') 
+      { 
+       //
+       } else {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      }
+      timer1 = undefined;
+      timer2 = undefined;
+    };
+    
+    
+    function imageReset(id) {
+      var i1= document.getElementById(id);
+      i1.src = "";
+      i1.height=0;
+      i1.width=0;
+    }
+
+    function showA() {
+      nextN();
+
+      daItem = document.getElementById("item1");
+      document.getElementById("item2").innerHTML = '...';
+      imageReset("image1");
+      imageReset("image2");
+      
+      if ( isURL (cardsArray[n][0] ) ) {
+        daItem.innerHTML = "";
+        var i1=document.getElementById("image1");
+        i1.width="100";
+        i1.height="68";
+        i1.src= cardsArray[n][0];
+      } else {
+        daItem.innerHTML = cardsArray[n][0];
+      }
+
+      var daTime = document.getElementById("timeA").value * 1000;
+      timer2 = setTimeout(
+        function() {
+          showB()
+        }, daTime);
+    };
+    
+
+    // how about file:/// ?
+    function isURL( str ) {
+      if (typeof str === 'undefined') {
+        return false;
+      }
+      if (str.length < 7) {
+        return false;
+      }
+      var prefix = str.substring(0,7).toUpperCase();
+      if ( prefix == "HTTP://" || prefix == "FILE://" ) {
+        return true;
+      }
+      return false;
+    }
+
+    // if url, then image?
+    function showB() {
+      var daItem = document.getElementById("item2");
+      if ( isURL (cardsArray[n][1] ) ) {
+        daItem.innerHTML = "";
+        var i2=document.getElementById("image2");
+        i2.width="100";
+        i2.height="68";
+        i2.src= cardsArray[n][1];
+      } else {
+        daItem.innerHTML = cardsArray[n][1];
+      }
+      var daTime = document.getElementById("timeB").value * 1000;
+      timer1 = setTimeout(
+        function() {
+          showA();
+        }, daTime);
+
+    };
+
+    function resetFlow() {
+      n = 0;
+    };
+
+    function shuffle(array) {
+      var currentIndex = array.length
+      , temporaryValue
+      , randomIndex
+      ;
+
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      
+      return array;
+    };
+
+    // ref: http://stackoverflow.com/a/1293163/2343
+    // This will parse a delimited string into an array of
+    // arrays. The default delimiter is the comma, but this
+    // can be overriden in the second argument.
+    function CSVToArray( strData, strDelimiter ) {
+      // Check to see if the delimiter is defined. If not,
+      // then default to comma.
+      strDelimiter = (strDelimiter || ",");
+
+      // Create a regular expression to parse the CSV values.
+      var objPattern = new RegExp(
+        (
+          // Delimiters.
+          "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+
+                // Quoted fields.
+                "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+
+                // Standard fields.
+                "([^\"\\" + strDelimiter + "\\r\\n]*))"
+                   ),
+                   "gi"
+                   );
+
+
+                   // Create an array to hold our data. Give the array
+                   // a default empty first row.
+                   var arrData = [[]];
+
+                   // Create an array to hold our individual pattern
+                   // matching groups.
+                   var arrMatches = null;
+
+
+                   // Keep looping over the regular expression matches
+                   // until we can no longer find a match.
+                   while (arrMatches = objPattern.exec( strData )){
+
+            // Get the delimiter that was found.
+            var strMatchedDelimiter = arrMatches[ 1 ];
+
+            // Check to see if the given delimiter has a length
+            // (is not the start of string) and if it matches
+            // field delimiter. If id does not, then we know
+            // that this delimiter is a row delimiter.
+            if (
+              strMatchedDelimiter.length &&
+              strMatchedDelimiter !== strDelimiter
+            ){
+
+              // Since we have reached a new row of data,
+              // add an empty row to our data array.
+              arrData.push( [] );
+
+            }
+
+            var strMatchedValue;
+
+            // Now that we have our delimiter out of the way,
+            // let's check to see which kind of value we
+            // captured (quoted or unquoted).
+            if (arrMatches[ 2 ]){
+
+              // We found a quoted value. When we capture
+              // this value, unescape any double quotes.
+              strMatchedValue = arrMatches[ 2 ].replace(
+                new RegExp( "\"\"", "g" ),
+                "\""
+              );
+
+            } else {
+
+              // We found a non-quoted value.
+              strMatchedValue = arrMatches[ 3 ];
+
+            }
+
+
+            // Now that we have our value string, let's add
+            // it to the data array.
+            arrData[ arrData.length - 1 ].push( strMatchedValue );
+          }
+
+          // Return the parsed data.
+          return( arrData );
+        }
+
+        function toggleDisplay(obj) {
+          var e=document.getElementById(obj);
+//          e.style.display=(e.style.display!='none') ? 'none' : '';
+          e.className=(e.className!='displayNone') ? 'displayNone' : '';
+        }
+    </script>
+
+    <div>
+      <span><font id="item1" size="5">Prompt</font></span>
+      <img src="" id="image1" alt="" /> is 
+      <span><font id="item2" size="5">Answer</font></span>
+      <img src="" id="image2" alt="" />
+      
+    </div>
+    <div>flashCards by Brent Neal Reeves.</div>
+    
+    <div>
+      <p />
+      <button onclick="startFlow()">Start</button>
+      <button onclick="shuffleData()">Shuffle</button>
+      <button onclick="stopFlow()">Stop</button>
+      <br />Delays: prompt <input id="timeA" type="text" size="1" value="3">
+        answer <input id="timeB" type="text" size="1" value="1"> seconds.
+    </div>
+    
+    <textarea id="lines" rows="5" cols="60">one,eins
+two,zwei
+three,drei
+four,vier
+five,fuenf
+    </textarea>
+    <br />
+    <a href=# onclick="toggleDisplay('docs');">Documentation</a>
+    <span class="displayNone" id="docs">
+      <br />Paste your prompts and answers over the example lines below and click "Start".
+      <br />Items can be text strings or URLs.
+      <br />Shuffle reorders the list to mix things up a bit.
+      <br />Delay times let you show the prompt for X seconds, then the answer for Y seconds.
+      <br />The items are shown in groups of 4: 1,2,3,4, 2,3,4,5, 3,4,5,6 etc.
+    </span>
+
+    <br />
+    <a href=# onclick="toggleDisplay('examples');">Examples</a>
+    <span class="displayNone" id="examples">
+      <br />Pictures and Names.  If you have a folder of image files, for example student pictures of type .jpg, use the "file://" URL to display them:
+      <pre>
+file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
+file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
+file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
+      </pre>
+
+Pictures and Names.  Or how about a list of URLS? Use "http://" to display them:
+      <pre>
+http://pix.com/BillyJoe.jpg,Billy Joe
+file://pix.com/JoeBob.jpg,Joe Bob
+file://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
+      </pre>
+
+
+Memorizing numbers:
+      <pre>
+1,gun
+2,zoo
+3,tree
+4,door
+5,hive
+6,stick
+7,heaven
+8,gate
+9,wine
+10,den
+      </pre>
+
+Or memorizing numbers more sophisticatedly:
+      <pre>
+1,tie
+2,noah
+3,ma
+4,rye
+5,law
+6,shoe
+7,cow
+8,ivy
+9,bee
+10,toes
+      </pre>
+    
+Memorizing a card deck:
+      <pre>
+Ace of clubs,cat
+2 of clubs,can
+3 of clubs,comb
+4 of clubs,core
+5 of clubs,coal
+6 of clubs,cash
+      </pre>
+
+  </body>
+</html>
