@@ -6,7 +6,7 @@ Javascript flash card page for memorizing word associations, names and faces, et
 Supports text and images. Here are some example lists.
 
 Pictures and Names. If you have a folder of image files, for example student pictures of type .jpg, 
-use "file://" URL to display them:
+use &quot;file://&quot; URL to display them:
 
 <pre>
 file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
@@ -14,7 +14,7 @@ file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
 file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
 </pre>
       
-Or how about a list of web images? Use "http://" to display them:
+Or how about a list of web images? Use &quot;http://&quot; to display them:
 
 <pre>
 http://pix.com/BillyJoe.jpg,Billy Joe
