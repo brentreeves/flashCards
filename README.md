@@ -3,7 +3,7 @@ flashCards
 
 Javascript flash card page for memorizing word associations, names and faces, etc.
 
-Supports text and images.
+Supports text and images. Here are some example lists.
 
 Pictures and Names. If you have a folder of image files, for example student pictures of type .jpg, 
 use "file://" URL to display them:
@@ -39,6 +39,7 @@ Memorizing numbers:
 
 Or memorizing numbers more sophisticatedly:
 
+<pre>
 1,tie
 2,noah
 3,ma
@@ -49,12 +50,15 @@ Or memorizing numbers more sophisticatedly:
 8,ivy
 9,bee
 10,toes
+</pre>
       
 Memorizing a card deck:
 
+<pre>
 Ace of clubs,cat
 2 of clubs,can
 3 of clubs,comb
 4 of clubs,core
 5 of clubs,coal
 6 of clubs,cash
+</pre>
