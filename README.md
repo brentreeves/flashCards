@@ -1,7 +1,10 @@
 flashCards
 ==========
 
+by Brent Neal Reeves.  
+
 Javascript flash card page for memorizing word associations, names and faces, etc.
+MIT License: http://www.opensource.org/licenses/mit-license.php
 
 Supports text and images. Here are some example lists.
 
