@@ -8,18 +8,23 @@ Supports text and images.
 Pictures and Names. If you have a folder of image files, for example student pictures of type .jpg, 
 use "file://" URL to display them:
 
+<pre>
 file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
 file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
 file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
+</pre>
       
 Or how about a list of web images? Use "http://" to display them:
 
+<pre>
 http://pix.com/BillyJoe.jpg,Billy Joe
 http://pix.com/JoeBob.jpg,Joe Bob
 http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
+</pre>
       
 Memorizing numbers:
 
+<pre>
 1,gun
 2,zoo
 3,tree
@@ -30,7 +35,8 @@ Memorizing numbers:
 8,gate
 9,wine
 10,den
-      
+</pre>      
+
 Or memorizing numbers more sophisticatedly:
 
 1,tie
