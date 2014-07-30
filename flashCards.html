@@ -38,7 +38,7 @@
     var i = 0;
     var item1 = "-+-";
     var item2 = "";
-    var lines="0,s\n1,tie\n2,noah\n3,ma\n4,rye\n5,law\n6,shoe\n7,cow\n8,ivy\n9,bee";
+    var lines="";
     
     function nextN() {
       wN += 1;
@@ -148,7 +148,6 @@
     };
     
 
-    // how about file:/// ?
     function isURL( str ) {
       if (typeof str === 'undefined') {
         return false;
@@ -163,7 +162,7 @@
       return false;
     }
 
-    // if url, then image?
+
     function showB() {
       var daItem = document.getElementById("item2");
       if ( isURL (cardsArray[n][1] ) ) {
@@ -229,15 +228,8 @@
                    "gi"
                    );
 
-
-                   // Create an array to hold our data. Give the array
-                   // a default empty first row.
                    var arrData = [[]];
-
-                   // Create an array to hold our individual pattern
-                   // matching groups.
                    var arrMatches = null;
-
 
                    // Keep looping over the regular expression matches
                    // until we can no longer find a match.
@@ -282,7 +274,6 @@
 
             }
 
-
             // Now that we have our value string, let's add
             // it to the data array.
             arrData[ arrData.length - 1 ].push( strMatchedValue );
@@ -294,7 +285,6 @@
 
         function toggleDisplay(obj) {
           var e=document.getElementById(obj);
-//          e.style.display=(e.style.display!='none') ? 'none' : '';
           e.className=(e.className!='displayNone') ? 'displayNone' : '';
         }
     </script>
