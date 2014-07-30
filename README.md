@@ -25,7 +25,7 @@ http://pix.com/JoeBob.jpg,Joe Bob
 http://pix.com/BubbaBlee.jpg,Bubba aka BubbaBlee
 </pre>
       
-Memorizing numbers:
+Memorizing numbers (Dale Carnegie):
 
 <pre>
 1,gun
@@ -40,7 +40,7 @@ Memorizing numbers:
 10,den
 </pre>      
 
-Or memorizing numbers more sophisticatedly:
+Or memorizing numbers more sophisticatedly (Harry Lorayne):
 
 <pre>
 1,tie
@@ -55,7 +55,7 @@ Or memorizing numbers more sophisticatedly:
 10,toes
 </pre>
       
-Memorizing a card deck:
+Memorizing a card deck (Harry Lorayne):
 
 <pre>
 Ace of clubs,cat
