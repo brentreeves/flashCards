@@ -19,7 +19,7 @@ Or how about a list of web images? Use "http://" to display them:
 <pre>
 http://pix.com/BillyJoe.jpg,Billy Joe
 http://pix.com/JoeBob.jpg,Joe Bob
-http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
+http://pix.com/BubbaBlee.jpg,Bubba aka BubbaBlee
 </pre>
       
 Memorizing numbers:
