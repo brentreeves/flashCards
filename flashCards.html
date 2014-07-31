@@ -5,6 +5,11 @@
     <title>Flash</title>
     <style>
     .displayNone { display: none; }
+    table { border-collapse: collapse; }
+    table, th, td { 
+                 border: 1px solid black; 
+                 vertical-align: top;
+                 }
     </style>
   </head>
   <body>
@@ -345,23 +350,14 @@ five,fuenf
     <br />
     <a href=# onclick="toggleDisplay('examples');">Examples</a>
     <span class="displayNone" id="examples">
-      <br />Pictures and Names.  If you have a folder of image files, for example student pictures of type .jpg, use the &quot;file://&quot; URL to display them:
-      <pre>
-file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
-file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
-file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
-      </pre>
 
-Pictures and Names.  Or how about a list of web images? Use &quot;http://&quot;.
-      <pre>
-http://pix.com/BillyJoe.jpg,Billy Joe
-http://pix.com/JoeBob.jpg,Joe Bob
-http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
-      </pre>
+<table>
+<tr>
 
-      <button onclick="loadExample('data_carnegie');"">Use</button>
-Memorizing numbers:
-      <pre id="data_carnegie">
+
+<td>
+  <button onclick="loadExample('data_carnegie');">Standard</button>
+  <pre id="data_carnegie">
 1,gun
 2,zoo
 3,tree
@@ -373,11 +369,11 @@ Memorizing numbers:
 9,wine
 10,den
       </pre>
+</td>
 
-
-      <button onclick="loadExample('data_harry');"">Use</button>
-Or memorizing numbers more sophisticatedly:
-      <pre id="data_harry">
+<td>
+  <button onclick="loadExample('data_harry');">Sophisticated</button>
+  <pre id="data_harry">
 1,tie
 2,noah
 3,ma
@@ -399,10 +395,12 @@ Or memorizing numbers more sophisticatedly:
 19,tub
 20,nose
       </pre>
+</td>
+
+  <td>    
+    <button onclick="loadExample('data_cards');">Playing cards</button>
     
-      <button onclick="loadExample('data_cards');"">Use</button>
-Memorizing a card deck:
-      <pre id="data_cards">
+    <pre id="data_cards">
 Ace of Clubs,cat
 2 of Clubs,can
 3 of Clubs,comb
@@ -456,6 +454,27 @@ Jack of Diamonds,diamond
 Queen of Diamonds,dream
 King of Diamonds,dingy
       </pre>
+</td>
 
+<td>
+      Pictures and Names - jpg files: use the &quot;file://&quot;
+      <pre>
+file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
+file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
+file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
+      </pre>
+</td>
+
+<td>
+Pictures and Names - web images: use &quot;http://&quot;.
+      <pre>
+http://pix.com/BillyJoe.jpg,Billy Joe
+http://pix.com/JoeBob.jpg,Joe Bob
+http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
+      </pre>
+</td>
+
+</tr>
+</table>
   </body>
 </html>
