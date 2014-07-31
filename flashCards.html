@@ -56,8 +56,25 @@
       return n;
     }
     
-    function loadData() {
-      var txt = document.getElementById("lines").value.trim();
+    function loadExample( id ) {
+      var txt = document.getElementById( id ).innerText.trim();
+      cardsArray = CSVToArray( txt );
+      redisplayLines();
+    }
+
+
+    function loadData(data) {
+      var txt = document.getElementById( data );
+      if (typeof txt === 'undefined') {
+        alert("Sorry - had trouble loading [" + data + "]");
+        return;
+      }
+      var txt = txt.value;
+      if (typeof txt === 'undefined') {
+        alert("Sorry - had trouble loading the value [" + data + "]");
+        return;
+      }
+      var txt = txt.trim();
       cardsArray = CSVToArray( txt );
     }
 
@@ -88,9 +105,10 @@
       }
     }
 
+
     function startFlow() {
       // Don't start a new flow if we are already flowing
-      loadData();
+      loadData("lines");
       if ( typeof timer1 !== 'undefined' ) 
       {
         return;
@@ -341,9 +359,9 @@ http://pix.com/JoeBob.jpg,Joe Bob
 http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
       </pre>
 
-
+      <button onclick="loadExample('data_carnegie');"">Use</button>
 Memorizing numbers:
-      <pre>
+      <pre id="data_carnegie">
 1,gun
 2,zoo
 3,tree
@@ -356,8 +374,10 @@ Memorizing numbers:
 10,den
       </pre>
 
+
+      <button onclick="loadExample('data_harry');"">Use</button>
 Or memorizing numbers more sophisticatedly:
-      <pre>
+      <pre id="data_harry">
 1,tie
 2,noah
 3,ma
@@ -368,16 +388,73 @@ Or memorizing numbers more sophisticatedly:
 8,ivy
 9,bee
 10,toes
+11,tot
+12,tin
+13,tomb
+14,tire
+15,towel
+16,dish
+17,tack
+18,dove
+19,tub
+20,nose
       </pre>
     
+      <button onclick="loadExample('data_cards');"">Use</button>
 Memorizing a card deck:
-      <pre>
-Ace of clubs,cat
-2 of clubs,can
-3 of clubs,comb
-4 of clubs,core
-5 of clubs,coal
-6 of clubs,cash
+      <pre id="data_cards">
+Ace of Clubs,cat
+2 of Clubs,can
+3 of Clubs,comb
+4 of Clubs,core
+5 of Clubs,coal
+6 of Clubs,cash
+7 of Clubs,cock
+8 of Clubs,coffee
+9 of Clubs,cop
+10 of Clubs,case
+Jack of Clubs,club
+Queen of Clubs,cream
+King of Clubs,King
+Ace of Hearts,hat
+2 of Hearts,hen
+3 of Hearts,ham
+4 of Hearts,hare
+5 of Hearts,hail
+6 of Hearts,hush
+7 of Hearts,hog
+8 of Hearts,hive
+9 of Hearts,Hope
+10 of Hearts,hose
+Jack of Hearts,heart
+Queen of Hearts,Queen
+King of Hearts,hinge
+Ace of Spades,suit
+2 of Spades,sun
+3 of Spades,sam
+4 of Spades,seer
+5 of Spades,sail
+6 of Spades,sushi
+7 of Spades,sock
+8 of Spades,safe
+9 of Spades,sap
+10 of Spades,suds
+Jack of Spades,spade
+Queen of Spades,steam
+King of Spades,swing
+Ace of Diamonds,dot
+2 of Diamonds,dune
+3 of Diamonds,dam
+4 of Diamonds,door
+5 of Diamonds,doll
+6 of Diamonds,dusche
+7 of Diamonds,dock
+8 of Diamonds,dive
+9 of Diamonds,deb
+10 of Diamonds,dose
+Jack of Diamonds,diamond
+Queen of Diamonds,dream
+King of Diamonds,dingy
       </pre>
 
   </body>
