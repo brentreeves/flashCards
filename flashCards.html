@@ -143,8 +143,8 @@
     function imageReset(id) {
       var i1= document.getElementById(id);
       i1.src = "";
-      i1.height=0;
-      i1.width=0;
+//      i1.height=0;
+//      i1.width=0;
     }
 
 
@@ -153,14 +153,14 @@
 
       daItem = document.getElementById("item1");
       document.getElementById("item2").innerHTML = '...';
-      imageReset("image1");
+//      imageReset("image1");
       imageReset("image2");
       
       if ( isURL (cardsArray[n][0] ) ) {
         daItem.innerHTML = "";
         var i1=document.getElementById("image1");
-        i1.width="100";
-        i1.height="68";
+//        i1.width="100";
+//        i1.height="68";
         i1.src= cardsArray[n][0];
       } else {
         daItem.innerHTML = cardsArray[n][0];
@@ -181,8 +181,8 @@
       if (str.length < 7) {
         return false;
       }
-      var prefix = str.substring(0,7).toUpperCase();
-      if ( prefix == "HTTP://" || prefix == "FILE://" ) {
+      var prefix = str.substring(0,4).toUpperCase();
+      if ( prefix == "HTTP" || prefix == "FILE" ) {
         return true;
       }
       return false;
@@ -194,8 +194,8 @@
       if ( isURL (cardsArray[n][1] ) ) {
         daItem.innerHTML = "";
         var i2=document.getElementById("image2");
-        i2.width="100";
-        i2.height="68";
+//        i2.width="100";
+//        i2.height="68";
         i2.src= cardsArray[n][1];
       } else {
         daItem.innerHTML = cardsArray[n][1];
@@ -335,7 +335,7 @@
         answer <input id="timeB" type="text" size="1" value="1"> seconds.
     </div>
     
-    <textarea id="lines" rows="5" cols="60">one,eins
+    <textarea id="lines" rows="5" cols="80">one,eins
 two,zwei
 three,drei
 four,vier
