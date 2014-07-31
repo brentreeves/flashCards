@@ -7,28 +7,27 @@
     .displayNone { display: none; }
     table { border-collapse: collapse; }
     table, th, td { 
-                 border: 1px solid black; 
-                 vertical-align: top;
-                 }
+                   border: 1px solid black; 
+                   vertical-align: top;
+                   }
     </style>
   </head>
   <body>
     <script>
-/**
- * flashCards.html (javascript memorization tool)
- * version: 0.5 (2014-07-28)
- *
- * This document is licensed as free software under the terms of the
- * MIT License: http://www.opensource.org/licenses/mit-license.php
- *
- * Acknowledgements:
- * Thanks to stackoverflow.com and w3schools.com
- *
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- *
-              * Copyright (c) 2014 by Brent Neal Reeves
- */
-    var myformat = 'M/d/yy h:mm:ss a';
+    /**
+     * flashCards.html (javascript memorization tool)
+     * version: 0.5 (2014-07-28)
+     *
+     * This document is licensed as free software under the terms of the
+     * MIT License: http://www.opensource.org/licenses/mit-license.php
+     *
+     * Acknowledgements:
+     * Thanks to stackoverflow.com and w3schools.com
+     *
+     * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+     *
+     * Copyright (c) 2014 by Brent Neal Reeves
+     */
     var timer1;
     var timer2;
     var timeA=3;
@@ -61,6 +60,7 @@
       return n;
     }
     
+
     function loadExample( id ) {
       var txt = document.getElementById( id ).innerText.trim();
       cardsArray = CSVToArray( txt );
@@ -83,6 +83,7 @@
       cardsArray = CSVToArray( txt );
     }
 
+
     function shuffleData() {
       loadData();
       shuffle(cardsArray);
@@ -101,6 +102,7 @@
     function dumpData() {
       console.log( document.getElementById("lines").value );
     }
+
 
     function dumpArray() {
       var arrayLength = cardsArray.length;
@@ -144,6 +146,7 @@
       i1.height=0;
       i1.width=0;
     }
+
 
     function showA() {
       nextN();
@@ -205,9 +208,11 @@
 
     };
 
+
     function resetFlow() {
       n = 0;
     };
+
 
     function shuffle(array) {
       var currentIndex = array.length
@@ -313,16 +318,16 @@
     </script>
 
     <div>
-      <span><font id="item1" size="5">Prompt</font></span>
-      <img src="" id="image1" alt="" /> is 
-      <span><font id="item2" size="5">Answer</font></span>
-      <img src="" id="image2" alt="" />
+      <span id="item1">Prompt</span>
+      <img src="" id="image1" alt=""> is 
+      <span>id="item2">Answer</span>
+      <img src="" id="image2" alt="">
       
     </div>
     <div><br />flashCards by Brent Neal Reeves.</div>
     
     <div>
-      <p />
+      <br />
       <button onclick="startFlow()">Start</button>
       <button onclick="shuffleData()">Shuffle</button>
       <button onclick="stopFlow()">Stop</button>
@@ -349,15 +354,16 @@ five,fuenf
 
     <br />
     <a href=# onclick="toggleDisplay('examples');">Examples</a>
-    <span class="displayNone" id="examples">
 
-<table>
-<tr>
+    <div class="displayNone" id="examples">
+
+      <table>
+        <tr>
 
 
-<td>
-  <button onclick="loadExample('data_carnegie');">Standard</button>
-  <pre id="data_carnegie">
+          <td>
+            <button onclick="loadExample('data_carnegie');">Standard</button>
+            <pre id="data_carnegie">
 1,gun
 2,zoo
 3,tree
@@ -368,12 +374,12 @@ five,fuenf
 8,gate
 9,wine
 10,den
-      </pre>
-</td>
+            </pre>
+          </td>
 
-<td>
-  <button onclick="loadExample('data_harry');">Sophisticated</button>
-  <pre id="data_harry">
+          <td>
+            <button onclick="loadExample('data_harry');">Sophisticated</button>
+            <pre id="data_harry">
 1,tie
 2,noah
 3,ma
@@ -394,13 +400,13 @@ five,fuenf
 18,dove
 19,tub
 20,nose
-      </pre>
-</td>
+            </pre>
+          </td>
 
-  <td>    
-    <button onclick="loadExample('data_cards');">Playing cards</button>
-    
-    <pre id="data_cards">
+          <td>    
+            <button onclick="loadExample('data_cards');">Playing cards</button>
+            
+            <pre id="data_cards">
 Ace of Clubs,cat
 2 of Clubs,can
 3 of Clubs,comb
@@ -453,28 +459,29 @@ Ace of Diamonds,dot
 Jack of Diamonds,diamond
 Queen of Diamonds,dream
 King of Diamonds,dingy
-      </pre>
-</td>
+            </pre>
+          </td>
 
-<td>
+          <td>
       Pictures and Names - jpg files: use the &quot;file://&quot;
-      <pre>
+            <pre>
 file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
 file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
 file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Dipstick
-      </pre>
-</td>
+            </pre>
+          </td>
 
-<td>
+          <td>
 Pictures and Names - web images: use &quot;http://&quot;.
-      <pre>
+            <pre>
 http://pix.com/BillyJoe.jpg,Billy Joe
 http://pix.com/JoeBob.jpg,Joe Bob
 http://pix.com/BubbaBlee.jpg,Bubba aka Dipstick
-      </pre>
-</td>
+            </pre>
+          </td>
 
-</tr>
-</table>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
