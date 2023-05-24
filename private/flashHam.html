@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Flash</title>
+    <style>
+    .displayNone { display: none; }
+    table { border-collapse: collapse; }
+    table, th, td { 
+                   border: 1px solid black; 
+                   vertical-align: top;
+                   }
+                   #item1 { font-size: 2em; }
+                   #item2 { font-size: 2em; }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <span id="item1">Click Start</span>
+      <img src="" id="image1" height="100" align="middle" alt=""> is 
+      <span id="item2">To See Example</span>
+      <img src="" id="image2" height="100" align="middle" alt="">
+    </div>
+
+    
+    <div>
+      <br />
+      <button onclick="startFlow()">Start</button>
+      <button onclick="shuffleData()">Shuffle</button>
+      <button onclick="stopFlow()">Stop</button>
+      <br />Delays: prompt <input id="timeA" type="text" size="1" value="3">
+        answer <input id="timeB" type="text" size="1" value="10"> seconds.
+      <br />Group size: <input id="groupSize" type="text" size="1" value="3">
+    </div>
+    
+    <textarea id="lines" rows="5" cols="80">one,Eins
+two,Zwei
+three,Drei
+four,Vier
+five,Fuenf
+    </textarea>
+
+    <br />
+    <a href=# onclick="toggleDisplay('docs');">Documentation</a>
+    <div class="displayNone" id="docs">
+      <ul>
+        <li>Click &quot;Start&quot; button now to see the example list in action while browsing the rest of these notes.
+        </li>
+
+        <li>To make your own list, paste your prompts and answers (separated by a comma) into the textbox and click &quot;Start&quot;. The examples below have convenient buttons to do the copy-paste.  Remember, just one comma per line because that is how we separate the prompt from the answer.
+        </li>
+
+        <li>Shuffle reorders the list to mix things up a bit.
+        </li>
+
+        <li>Delay times let you show the prompt for X seconds, then the answer for Y seconds.  For quick review, try times of 1.5 and .6 seconds and then restart.
+        </li>
+
+        <li>The items are shown in groups. Group size of 3 means to show items in the following order 1,2,3, 2,3,4, 3,4,5 etc.  That works better for me than a group size of 1, which means 1,2,3,4,5 i.e. no repetition.  The very first time I learn 40 new faces, I use 3,10 so the picture is shown for 3 seconds, then the name appears for 10.  I make the window just large enough to show name and face and just let it spin over in the corner, paying attention to it now and then.
+        </li>
+
+        <li>Items can be text strings or URLs, as seen in the Examples below.  This is what I use most to help learn names of students.  My university intranet has student images available at a URL something like https://my.edu/image/student/123456/picture.jpg so I make a text file with one line per student along with their name.
+          <br />What if you're not near wifi?  In that case, plan ahead and download all the image files to a folder on your local drive and use &quot;file:///blee/blah/blue...&quot;
+        </li>
+
+        <li>Starting to know half of your list well?  Just cut those lines out of the text box and restart to focus on the rest.
+        </li>
+
+      </ul>
+    </div>
+
+    <br />
+    <a href=# onclick="toggleDisplay('examples');">Examples</a>
+
+    <div class="displayNone" id="examples">
+
+      <table>
+        <tr>
+
+
+          <td>
+            <button onclick="loadExample('data_carnegie');">Standard</button>
+            <pre id="data_carnegie">
+1,gun
+2,zoo
+3,tree
+4,door
+5,hive
+6,stick
+7,heaven
+8,gate
+9,wine
+10,den
+            </pre>
+
+            <button onclick="loadExample('data_consonants');">Consonants</button>
+            <pre id="data_consonants">
+0,s z
+1,t d
+2,n
+3,m
+4,r
+5,l
+6,sh j
+7,k
+8,f v
+9,b p
+            </pre>
+
+            <button onclick="loadExample('data_german');">Deutsch</button>
+            <pre id="data_german">
+0,Null
+1,Eins
+2,Zwei 
+3,Drei
+4,Vier
+5,Fuenf
+6,Sechs
+7,Sieben
+8,Acht
+9,Neun
+10,Zehn
+            </pre>
+
+          </td>
+
+          <td>
+            <button onclick="loadExample('data_harry');">Sophisticated</button>
+            <pre id="data_harry">
+1,tie
+2,noah
+3,ma
+4,rye
+5,law
+6,shoe
+7,cow
+8,ivy
+9,bee
+10,toes
+11,tot
+12,tin
+13,tomb
+14,tire
+15,towel
+16,dish
+17,tack
+18,dove
+19,tub
+20,nose
+21,net
+22,nun
+23,gnome
+24,nero
+25,nail
+26,notch
+27,neck
+28,knife
+29,knob
+30,mice
+31,mat
+32,moon
+33,mummy
+34,mower
+35,mail
+36,match
+37,mug
+38,movie
+39,mop
+40,rose
+41,rat
+42,rhino
+43,ram
+44,rear
+45,roll
+46,roach
+47,rake
+48,roof
+49,rope
+50,lasso
+51,lute
+52,lion
+            </pre>
+          </td>
+
+          <td>    
+            <button onclick="loadExample('data_cards');">Playing cards</button>
+            
+            <pre id="data_cards">
+Ace of Clubs,cat
+2 of Clubs,can
+3 of Clubs,comb
+4 of Clubs,car
+5 of Clubs,coal
+6 of Clubs,cash
+7 of Clubs,cock
+8 of Clubs,coffee
+9 of Clubs,cop
+10 of Clubs,case
+Jack of Clubs,club
+Queen of Clubs,cream
+King of Clubs,King
+Ace of Hearts,hat
+2 of Hearts,hen
+3 of Hearts,ham
+4 of Hearts,hare
+5 of Hearts,hail
+6 of Hearts,hatch
+7 of Hearts,hog
+8 of Hearts,hive
+9 of Hearts,Hope
+10 of Hearts,hose
+Jack of Hearts,heart
+Queen of Hearts,Queen
+King of Hearts,hinge
+Ace of Spades,suit
+2 of Spades,sun
+3 of Spades,sam
+4 of Spades,seer
+5 of Spades,sail
+6 of Spades,sushi
+7 of Spades,sock
+8 of Spades,safe
+9 of Spades,sap
+10 of Spades,suds
+Jack of Spades,spade
+Queen of Spades,steam
+King of Spades,swing
+Ace of Diamonds,dot
+2 of Diamonds,dune
+3 of Diamonds,dam
+4 of Diamonds,door
+5 of Diamonds,doll
+6 of Diamonds,dutch
+7 of Diamonds,dock
+8 of Diamonds,dive
+9 of Diamonds,deb
+10 of Diamonds,dose
+Jack of Diamonds,diamond
+Queen of Diamonds,dream
+King of Diamonds,dingy
+            </pre>
+          </td>
+
+          <td>
+      Pictures and Names - jpg files: use the &quot;file://&quot;
+            <pre>
+file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
+file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
+file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Special-One
+            </pre>
+
+Pictures and Names - web images: use &quot;http://&quot;.
+            <pre>
+http://pix.com/BillyJoe.jpg,Billy Joe
+http://pix.com/JoeBob.jpg,Joe Bob
+http://pix.com/BubbaBlee.jpg,Bubba aka Special-One
+            </pre>
+          </td>
+
+        </tr>
+      </table>
+    </div>
+    <div><br />flashCards by Brent Neal Reeves.</div>
+    <script src="flash.js"></script>
+  </body>
+</html>

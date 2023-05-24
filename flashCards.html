@@ -1,261 +1,279 @@
 <!doctype html>
 <html lang="en">
+  <!-- TODO: shuffle breaks the array? -->
   <head>
     <meta charset="UTF-8">
     <title>Flash</title>
     <style>
-    .displayNone { display: none; }
-    table { border-collapse: collapse; }
-    table, th, td { 
-                   border: 1px solid black; 
-                   vertical-align: top;
-                   }
-                   #item1 { font-size: 2em; }
-                   #item2 { font-size: 2em; }
+      .displayNone { display: none; }
+      table { border-collapse: collapse; }
+      table, th, td { 
+          border: 1px solid black; 
+          vertical-align: top;
+      }
+      #item1 { font-size: 2em; }
+      #item2 { font-size: 2em; }
     </style>
   </head>
   <body>
     <script>
-    /**
-     * flashCards.html (javascript memorization tool)
-     * version: 0.5 (2014-07-28)
-     *
-     * This document is licensed as free software under the terms of the
-     * MIT License: http://www.opensource.org/licenses/mit-license.php
-     *
-     * Acknowledgements:
-     * Thanks to stackoverflow.com and w3schools.com
-     *
-     * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
-     *
-     * Copyright (c) 2014 by Brent Neal Reeves
-     */
-    var timer1;
-    var timer2;
-    var timeA=3;
-    var timeB=10;
-    var n = 0;
-    var groupSize = 3; 
-    var wN = 0;
-    
-    var cardsInput='';
-    var cardsArray;
-    
-    var i = 0;
-    var lines="";
-    
-    function nextN() {
-      //      console.log("nextN n: " + n + " groupSize [" + groupSize + "]")
-
-      if (groupSize > 1) {
-        wN += 1;
-        if (wN >= groupSize) {
-          n = n - (groupSize - 1);
-          wN = 0;
-        };
-      };
-      n += 1;
-      if (n >= cardsArray.length) {
-        n = 0;
-      }
-      if (n < 0) {
-        n = cardsArray.length + n;
-      }
-      return n;
-    }
-    
-
-    function loadExample( id ) {
-      var txt = document.getElementById( id ).innerText.trim();
-      cardsArray = CSVToArray( txt );
-      redisplayLines();
-    }
-
-
-    function loadData(data) {
-      var txt = document.getElementById( data );
-      if (typeof txt === 'undefined') {
-        alert("Sorry - had trouble loading [" + data + "]");
-        return;
-      }
-      var txt = txt.value;
-      if (typeof txt === 'undefined') {
-        alert("Sorry - had trouble loading the value [" + data + "]");
-        return;
-      }
-      var txt = txt.trim();
-      cardsArray = CSVToArray( txt );
-    }
-
-
-    function shuffleData() {
-      loadData();
-      shuffle(cardsArray);
-      redisplayLines();
-    }
-
-    function redisplayLines() {
-      var txt ="";
-      for (var i=0; i< cardsArray.length; i++) {
-        txt = txt + cardsArray[i][0] + "," + cardsArray[i][1] + "\n";
-      }
-      document.getElementById("lines").value = txt;
-    }
-    
-
-    function dumpData() {
-      console.log( document.getElementById("lines").value );
-    }
-
-
-    function dumpArray() {
-      var arrayLength = cardsArray.length;
-      console.log('Length: ' + arrayLength + ' n is ' + n);
-      for(var i=0; i< arrayLength; i++) {
-        console.log( i + ': ' + cardsArray[i][0] + ' is ' + cardsArray[i][1]);
-      }
-    }
-
-    function startFlow() {
-      loadData("lines");
+      /**
+       * flashCards.html (javascript memorization tool)
+       * version: 0.5 (2014-07-28)
+       *
+       * This document is licensed as free software under the terms of the
+       * MIT License: http://www.opensource.org/licenses/mit-license.php
+       *
+       * Acknowledgements:
+       * Thanks to stackoverflow.com and w3schools.com
+       *
+       * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.  NO! REALLY!  YOU COULD MEMORIZE A WRONG THING - LIKE, FOR EXAMPLE,
+       * THAT "SOCIALISM IS GREAT" OR "MARXISM IS GOOD", WHEN, ACTUALLY, THEY ALWAYS LIMIT INDIVIDUAL HUMAN FREEDOM AND 
+       * COMPELLED SPEECH, WHICH IS A TERRIBLE EVIL.
+       *
+       * Copyright (c) 2014 - 2021 by Brent Neal Reeves
+       */
+      var timer1;
+      var timer2;
+      var timeA=3;
+      var timeB=10;
+      var n = 0;
+      var groupSize = 3; 
+      var wN = 0;
       
-      n=0;
-      var gs = document.getElementById("groupSize").value;
-      var gsInt = parseInt(gs);
+      var cardsInput='';
+      var cardsArray;
+      
+      var i = 0;
+      var lines="";
+      
+      function nextN() {
+	  //      console.log("nextN n: " + n + " groupSize [" + groupSize + "]")
 
-      if ( isNaN(gsInt) ) {
-          groupSize = 1;
-          document.getElementById("groupSize").value = 1;
-      } else {
-        groupSize = Math.abs(gsInt);
-        if (gsInt < 0) {
-          document.getElementById("groupSize").value = groupSize;          
-        }
-        
-        
-        if (groupSize >= cardsArray.length) {
-          groupSize = cardsArray.length - 2;
-          document.getElementById("groupSize").value = groupSize;
-        }
-        
-        if (groupSize < 1) {
-          groupSize = 1;
-          document.getElementById("groupSize").value = 1;
-        }
+	  if (groupSize > 1) {
+              wN += 1;
+              if (wN >= groupSize) {
+		  n = n - (groupSize - 1);
+		  wN = 0;
+              };
+	  };
+	  n += 1;
+	  if (n >= cardsArray.length) {
+              n = 0;
+	  }
+	  if (n < 0) {
+              n = cardsArray.length + n;
+	  }
+	  return n;
+      }
+      
 
+      function loadExample( id ) {
+	  var txt = document.getElementById( id ).innerText.trim();
+	  cardsArray = CSVToArray( txt, "," );
+	  // console.log("loadExample: cardsArray is now: ")
+	  // console.table(cardsArray);
+	  // console.log("==========")
+	  redisplayLines();
       }
 
-      if ( typeof timer1 !== 'undefined' ) {
-        return;
-      }        
 
-        showA();
+      function loadData(data) {
+	  if (data == null) {
+              alert("Sorry - loadData not happy with empty input.");
+              return;
+	  }
+	  var txt = document.getElementById( data );
+	  if (typeof txt === 'undefined') {
+              alert("Sorry - had trouble loading [" + data + "]");
+              return;
+	  }
+	  // console.log("loadData txt is now 1: [" + txt + "]");
+	  var txt = txt.value;
+	  // console.log("loadData txt is now 2: [" + txt + "]");
+	  if (typeof txt === 'undefined') {
+              alert("Sorry - had trouble loading the value [" + data + "]");
+              return;
+	  }
+	  var txt = txt.trim();
+	  cardsArray = CSVToArray( txt, "," );
+      }
+
+
+      function shuffleData() {
+//	  loadData();
+	  shuffle(cardsArray);
+	  redisplayLines();
+      }
+
+      function redisplayLines() {
+	  var txt ="";
+	  for (var i=0; i< cardsArray.length; i++) {
+              txt = txt + cardsArray[i][0] + "," + cardsArray[i][1] + "\n";
+	  }
+	  document.getElementById("lines").value = txt;
+      }
+      
+
+      function dumpData() {
+	  console.log( document.getElementById("lines").value );
+      }
+
+
+      function dumpArray() {
+	  console.table(cardsArray);
+	  // old...
+      // 	  var arrayLength = cardsArray.length;
+      // 	  console.log('Length: ' + arrayLength + ' n is ' + n);
+      // 	  for(var i=0; i< arrayLength; i++) {
+      //         console.log( i + ': ' + cardsArray[i][0] + ' is ' + cardsArray[i][1]);
+      // 	  }
+      }
+
+      function startFlow() {
+	  loadData("lines");
+	  
+	  n=0;
+	  var gs = document.getElementById("groupSize").value;
+	  var gsInt = parseInt(gs);
+
+	  if ( isNaN(gsInt) ) {
+              groupSize = 1;
+              document.getElementById("groupSize").value = 1;
+	  } else {
+              groupSize = Math.abs(gsInt);
+              if (gsInt < 0) {
+		  document.getElementById("groupSize").value = groupSize;          
+              }
+              
+              
+              if (groupSize >= cardsArray.length) {
+		  groupSize = cardsArray.length - 2;
+		  document.getElementById("groupSize").value = groupSize;
+              }
+              
+              if (groupSize < 1) {
+		  groupSize = 1;
+		  document.getElementById("groupSize").value = 1;
+              }
+
+	  }
+
+	  if ( typeof timer1 !== 'undefined' ) {
+              return;
+	  }        
+
+          showA();
       }
       
       
       function stopFlow() {
-        if ( typeof timer1 === 'undefined') 
-        { 
-         //
-         } else {
-          clearTimeout(timer1);
-          clearTimeout(timer2);
-        }
-        timer1 = undefined;
-        timer2 = undefined;
+          if ( typeof timer1 === 'undefined') 
+          { 
+              //
+          } else {
+              clearTimeout(timer1);
+              clearTimeout(timer2);
+          }
+          timer1 = undefined;
+          timer2 = undefined;
       };
       
       
       function imageReset(id) {
-        var i1= document.getElementById(id);
-        i1.src = "";
-        //      i1.height=0;
-        //      i1.width=0;
+          var i1= document.getElementById(id);
+          i1.src = "";
+          //      i1.height=0;
+          //      i1.width=0;
       }
 
 
       function showA() {
-        nextN();
+          nextN();
 
-        daItem = document.getElementById("item1");
-        document.getElementById("item2").innerHTML = '...';
-        //      imageReset("image1");
-        imageReset("image2");
-        
-        if ( isURL (cardsArray[n][0] ) ) {
-          daItem.innerHTML = "";
-          var i1=document.getElementById("image1");
-          //        i1.width="100";
-          //        i1.height="68";
-          i1.src= cardsArray[n][0];
-        } else {
-          daItem.innerHTML = cardsArray[n][0];
-        }
+	  // console.log("showA n: " + n + "  cardsArray[n][0]: " + cardsArray[n][0]);
+	  // console.table(cardsArray);
+	  // console.log("  cardsArray[n]: " + cardsArray[n]);
+	  // console.log("  cardsArray[n][0]: " + cardsArray[n][0]);
+          daItem = document.getElementById("item1");
+          document.getElementById("item2").innerHTML = '...';
+          //      imageReset("image1");
+          imageReset("image2");
+          
+          if ( isURL (cardsArray[n][0] ) ) {
+              daItem.innerHTML = "";
+              var i1=document.getElementById("image1");
+              //        i1.width="100";
+              //        i1.height="68";
+              i1.src= cardsArray[n][0];
+          } else {
+              daItem.innerHTML = cardsArray[n][0];
+          }
 
-        var daTime = document.getElementById("timeA").value * 1000;
-        timer2 = setTimeout(
-          function() {
-            showB()
-          }, daTime);
+          var daTime = document.getElementById("timeA").value * 1000;
+          timer2 = setTimeout(
+              function() {
+		  showB()
+              }, daTime);
       };
       
 
       function isURL( str ) {
-        if (typeof str === 'undefined') {
+          if (typeof str === 'undefined') {
+              return false;
+          }
+          if (str.length < 7) {
+              return false;
+          }
+          var prefix = str.substring(0,4).toUpperCase();
+          if ( prefix == "HTTP" || prefix == "FILE" ) {
+              return true;
+          }
           return false;
-        }
-        if (str.length < 7) {
-          return false;
-        }
-        var prefix = str.substring(0,4).toUpperCase();
-        if ( prefix == "HTTP" || prefix == "FILE" ) {
-          return true;
-        }
-        return false;
       }
 
 
       function showB() {
-        var daItem = document.getElementById("item2");
-        if ( isURL (cardsArray[n][1] ) ) {
-          daItem.innerHTML = "";
-          var i2=document.getElementById("image2");
-          //        i2.width="100";
-          //        i2.height="68";
-          i2.src= cardsArray[n][1];
-        } else {
-          daItem.innerHTML = cardsArray[n][1];
-        }
-        var daTime = document.getElementById("timeB").value * 1000;
-        timer1 = setTimeout(
-          function() {
-            showA();
-          }, daTime);
+          var daItem = document.getElementById("item2");
+          if ( isURL (cardsArray[n][1] ) ) {
+              daItem.innerHTML = "";
+              var i2=document.getElementById("image2");
+              //        i2.width="100";
+              //        i2.height="68";
+              i2.src= cardsArray[n][1];
+          } else {
+              daItem.innerHTML = cardsArray[n][1];
+          }
+          var daTime = document.getElementById("timeB").value * 1000;
+          timer1 = setTimeout(
+              function() {
+		  showA();
+              }, daTime);
 
       };
 
 
       function resetFlow() {
-        n = 0;
+          n = 0;
       };
 
 
       function shuffle(array) {
-        var currentIndex = array.length
-        , temporaryValue
-        , randomIndex
-        ;
+          var currentIndex = array.length
+          , temporaryValue
+          , randomIndex
+          ;
 
-        while (0 !== currentIndex) {
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
+          while (0 !== currentIndex) {
+              randomIndex = Math.floor(Math.random() * currentIndex);
+              currentIndex -= 1;
 
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-        
-        return array;
+              temporaryValue = array[currentIndex];
+              array[currentIndex] = array[randomIndex];
+              array[randomIndex] = temporaryValue;
+          }
+          
+          return array;
       };
 
       // ref: http://stackoverflow.com/a/1293163/2343
@@ -263,31 +281,32 @@
       // arrays. The default delimiter is the comma, but this
       // can be overriden in the second argument.
       function CSVToArray( strData, strDelimiter ) {
-        // Check to see if the delimiter is defined. If not,
-        // then default to comma.
-        strDelimiter = (strDelimiter || ",");
+          // Check to see if the delimiter is defined. If not,
+          // then default to comma.
+	  strDelimiter = (strDelimiter || "::");
+	  // console.log("CSVToArray: " + strDelimiter);
 
-        // Create a regular expression to parse the CSV values.
-        var objPattern = new RegExp(
-          (
-            // Delimiters.
-            "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+          // Create a regular expression to parse the CSV values.
+          var objPattern = new RegExp(
+              (
+		  // Delimiters.
+		  "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
 
-                // Quoted fields.
-                "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+                  // Quoted fields.
+                  "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
 
-                // Standard fields.
-                "([^\"\\" + strDelimiter + "\\r\\n]*))"
-                   ),
-                   "gi"
-                   );
+                  // Standard fields.
+                  "([^\"\\" + strDelimiter + "\\r\\n]*))"
+              ),
+              "gi"
+          );
 
-                   var arrData = [[]];
-                   var arrMatches = null;
+          var arrData = [[]];
+          var arrMatches = null;
 
-                   // Keep looping over the regular expression matches
-                   // until we can no longer find a match.
-                   while (arrMatches = objPattern.exec( strData )){
+          // Keep looping over the regular expression matches
+          // until we can no longer find a match.
+          while (arrMatches = objPattern.exec( strData )){
 
               // Get the delimiter that was found.
               var strMatchedDelimiter = arrMatches[ 1 ];
@@ -297,13 +316,13 @@
               // field delimiter. If id does not, then we know
               // that this delimiter is a row delimiter.
               if (
-                strMatchedDelimiter.length &&
-                strMatchedDelimiter !== strDelimiter
+                  strMatchedDelimiter.length &&
+                      strMatchedDelimiter !== strDelimiter
               ){
 
-                // Since we have reached a new row of data,
-                // add an empty row to our data array.
-                arrData.push( [] );
+                  // Since we have reached a new row of data,
+                  // add an empty row to our data array.
+                  arrData.push( [] );
 
               }
 
@@ -314,41 +333,43 @@
               // captured (quoted or unquoted).
               if (arrMatches[ 2 ]){
 
-                // We found a quoted value. When we capture
-                // this value, unescape any double quotes.
-                strMatchedValue = arrMatches[ 2 ].replace(
-                  new RegExp( "\"\"", "g" ),
-                  "\""
-                );
+                  // We found a quoted value. When we capture
+                  // this value, unescape any double quotes.
+                  strMatchedValue = arrMatches[ 2 ].replace(
+                      new RegExp( "\"\"", "g" ),
+                      "\""
+                  );
 
               } else {
 
-                // We found a non-quoted value.
-                strMatchedValue = arrMatches[ 3 ];
+                  // We found a non-quoted value.
+                  strMatchedValue = arrMatches[ 3 ];
 
               }
 
               // Now that we have our value string, let's add
               // it to the data array.
               arrData[ arrData.length - 1 ].push( strMatchedValue );
-            }
-
-            // Return the parsed data.
-            return( arrData );
+//	      console.log("  parsed: " + strMatchedValue);
           }
 
-          function toggleDisplay(obj) {
-            var e=document.getElementById(obj);
-            e.className=(e.className!='displayNone') ? 'displayNone' : '';
-          }
+          // Return the parsed data.
+	  // console.log("  parse returns: ");
+	  // console.table(arrData);
+          return( arrData );
+      }
+
+      function toggleDisplay(obj) {
+          var e=document.getElementById(obj);
+          e.className=(e.className!='displayNone') ? 'displayNone' : '';
+      }
     </script>
 
     <div>
       <span id="item1">Click Start</span>
-      <img src="" id="image1" alt=""> is 
+      <img src="" id="image1" height="100" align="middle" alt=""> is 
       <span id="item2">To See Example</span>
-      <img src="" id="image2" alt="">
-      
+      <img src="" id="image2" height="100" align="middle" alt="">
     </div>
 
     
@@ -358,16 +379,15 @@
       <button onclick="shuffleData()">Shuffle</button>
       <button onclick="stopFlow()">Stop</button>
       <br />Delays: prompt <input id="timeA" type="text" size="1" value="3">
-        answer <input id="timeB" type="text" size="1" value="10"> seconds.
+      answer <input id="timeB" type="text" size="1" value="10"> seconds.
       <br />Group size: <input id="groupSize" type="text" size="1" value="3">
-
     </div>
     
     <textarea id="lines" rows="5" cols="80">one,Eins
-two,Zwei
-three,Drei
-four,Vier
-five,Fuenf
+      two,Zwei
+      three,Drei
+      four,Vier
+      five,Fuenf
     </textarea>
 
     <br />
@@ -420,7 +440,7 @@ five,Fuenf
 7,heaven
 8,gate
 9,wine
-10,den
+0,den
             </pre>
 
             <button onclick="loadExample('data_consonants');">Consonants</button>
@@ -449,7 +469,7 @@ five,Fuenf
 7,Sieben
 8,Acht
 9,Neun
-10,Zehn
+0,Zehn
             </pre>
 
           </td>
@@ -482,7 +502,7 @@ five,Fuenf
 23,gnome
 24,nero
 25,nail
-26,notch
+26,nacho
 27,neck
 28,knife
 29,knob
@@ -516,7 +536,7 @@ five,Fuenf
             <button onclick="loadExample('data_cards');">Playing cards</button>
             
             <pre id="data_cards">
-Ace of Clubs,cat
+e of Clubs,cat
 2 of Clubs,can
 3 of Clubs,comb
 4 of Clubs,car
@@ -525,11 +545,11 @@ Ace of Clubs,cat
 7 of Clubs,cock
 8 of Clubs,coffee
 9 of Clubs,cop
-10 of Clubs,case
-Jack of Clubs,club
-Queen of Clubs,cream
-King of Clubs,King
-Ace of Hearts,hat
+0 of Clubs,case
+k of Clubs,club
+n of Clubs,cream
+g of Clubs,King
+e of Hearts,hat
 2 of Hearts,hen
 3 of Hearts,ham
 4 of Hearts,hare
@@ -538,11 +558,11 @@ Ace of Hearts,hat
 7 of Hearts,hog
 8 of Hearts,hive
 9 of Hearts,Hope
-10 of Hearts,hose
-Jack of Hearts,heart
-Queen of Hearts,Queen
-King of Hearts,hinge
-Ace of Spades,suit
+0 of Hearts,hose
+k of Hearts,heart
+n of Hearts,Queen
+g of Hearts,hinge
+e of Spades,suit
 2 of Spades,sun
 3 of Spades,sam
 4 of Spades,seer
@@ -551,11 +571,11 @@ Ace of Spades,suit
 7 of Spades,sock
 8 of Spades,safe
 9 of Spades,sap
-10 of Spades,suds
-Jack of Spades,spade
-Queen of Spades,steam
-King of Spades,swing
-Ace of Diamonds,dot
+0 of Spades,suds
+k of Spades,spade
+n of Spades,steam
+g of Spades,swing
+e of Diamonds,dot
 2 of Diamonds,dune
 3 of Diamonds,dam
 4 of Diamonds,door
@@ -564,26 +584,26 @@ Ace of Diamonds,dot
 7 of Diamonds,dock
 8 of Diamonds,dive
 9 of Diamonds,deb
-10 of Diamonds,dose
-Jack of Diamonds,diamond
-Queen of Diamonds,dream
-King of Diamonds,dingy
+0 of Diamonds,dose
+k of Diamonds,diamond
+n of Diamonds,dream
+g of Diamonds,dingy
             </pre>
           </td>
 
           <td>
-      Pictures and Names - jpg files: use the &quot;file://&quot;
+	    Pictures and Names - jpg files: use the &quot;file://&quot;
             <pre>
-file:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
-file:///Users/bubba/pix/JoeBob.jpg,Joe Bob
-file:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Special-One
+e:///Users/bubba/pix/BillyJoe.jpg,Billy Joe
+e:///Users/bubba/pix/JoeBob.jpg,Joe Bob
+e:///Users/bubba/pix/BubbaBlee.jpg,Bubba aka Special-One
             </pre>
 
-Pictures and Names - web images: use &quot;http://&quot;.
+	    Pictures and Names - web images: use &quot;http://&quot;.
             <pre>
-http://pix.com/BillyJoe.jpg,Billy Joe
-http://pix.com/JoeBob.jpg,Joe Bob
-http://pix.com/BubbaBlee.jpg,Bubba aka Special-One
+p://pix.com/BillyJoe.jpg,Billy Joe
+p://pix.com/JoeBob.jpg,Joe Bob
+p://pix.com/BubbaBlee.jpg,Bubba aka Special-One
             </pre>
           </td>
 

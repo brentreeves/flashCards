@@ -1,0 +1,331 @@
+0::s
+1::tie
+2::noah
+3::ma
+4::rye
+5::law
+6::shoe
+7::cow
+8::ivy
+9::bee
+10::toes
+11::tot
+12::tin
+13::tomb
+14::tire
+15::towel
+16::dish
+17::tack
+18::dove
+19::tub
+20::nose
+21::net
+22::nun
+23::gnome
+24::nero
+25::nail
+26::notch
+27::neck
+28::knife
+29::knob
+30::mice
+31::mat
+32::moon
+33::mummy
+34::mower
+35::mail
+36::mule
+37::match
+38::movie
+39::mop
+40::rose
+41::rat
+42::rhino
+43::ram
+44::rear
+45::roll
+46::roach
+47::rake
+48::roof
+49::rope
+50::lasso
+51::lute
+52::lion
+53::lamb
+54::lure
+55::lilly
+56::lash
+57::lock
+58::leaf
+59::lip
+Ace of Clubs::cat
+2 of Clubs::can
+3 of Clubs::comb
+4 of Clubs::core
+5 of Clubs::coal
+6 of Clubs::cash
+7 of Clubs::cock
+8 of Clubs::coffee
+9 of Clubs::cop
+10 of Clubs::case
+Jack of Clubs::club
+Queen of Clubs::cream
+King of Clubs::King
+Ace of Hearts::hat
+2 of Hearts::hen
+3 of Hearts::ham
+4 of Hearts::hare
+5 of Hearts::hail
+6 of Hearts::hush
+7 of Hearts::hog
+8 of Hearts::hive
+9 of Hearts::Hope
+10 of Hearts::hose
+Jack of Hearts::heart
+Queen of Hearts::Queen
+King of Hearts::hinge
+Ace of Spades::suit
+2 of Spades::sun
+3 of Spades::sam
+4 of Spades::seer
+5 of Spades::sail
+6 of Spades::sushi
+7 of Spades::sock
+8 of Spades::safe
+9 of Spades::sap
+10 of Spades::suds
+Jack of Spades::spade
+Queen of Spades::steam
+King of Spades::swing
+Ace of Diamonds::dot
+2 of Diamonds::dune
+3 of Diamonds::dam
+4 of Diamonds::door
+5 of Diamonds::doll
+6 of Diamonds::dusche
+7 of Diamonds::dock
+8 of Diamonds::dive
+9 of Diamonds::deb
+10 of Diamonds::dose
+Jack of Diamonds::diamond
+Queen of Diamonds::dream
+King of Diamonds::dingy
+
+
+
+
+
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Alex_Burgos.jpg::Alex Burgos
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Camila_Rodrigues_Velasquez.jpg::Camila Rodrigues Velasquez
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Jael_Morel_Becerra.jpg::Jael Morel Becerra
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Jundong_Zhang.jpg::Jundong Zhang
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Keaton_Brewster.jpg::Keaton Brewster
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Kevin_Crawford_Jr.jpg::Kevin Crawford Jr
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Kyle_Valdez.jpg::Kyle Valdez
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Matthew_Weeden.jpg::Matthew Weeden
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Mitchell_Melrose.jpg::Mitchell Melrose
+file:///Users/brentnreeves/Documents/data/ACU/student-pix/19F_P2/Ruben_Yanez.jpg::Ruben Yanez
+
+
+
+
+file:///Users/brentnreeves/Sites/flash/pix/AmyTaylor.jpg::Amy Taylor
+file:///Users/brentnreeves/Sites/flash/pix/JesseCansino.jpg::Jesse Cansino
+file:///Users/brentnreeves/Sites/flash/pix/JustinFoley.jpg::Justin Foley
+file:///Users/brentnreeves/Sites/flash/pix/MattSolomon.jpg::Matt Solomon
+file:///Users/brentnreeves/Sites/flash/pix/RandyShaochengLang.jpg::Randy
+file:///Users/brentnreeves/Sites/flash/pix/RogerGee.jpg::Roger Gee
+file:///Users/brentnreeves/Sites/flash/pix/StephenBaty.jpg::Stephen Baty 
+
+http://memoryskills.blogspot.com/2009/09/how-to-remember-deck-of-cards.html
+
+
+https://www6.acu.edu/roster/service/person/rmc10b/photo/face.jpg::Ryan Clements Senior BBMN
+https://www6.acu.edu/roster/service/person/rpg11a/photo/face.jpg::Roger Gee Junior CS
+https://www6.acu.edu/roster/service/person/wlg11a/photo/face.jpg::Windell Gray Senior CS
+https://www6.acu.edu/roster/service/person/jdi10a/photo/face.jpg::Jonathan Ice Junior CS
+https://www6.acu.edu/roster/service/person/jtk12b/photo/face.jpg::Jeffrey Killeen Junior CS
+https://www6.acu.edu/roster/service/person/hzk11a/photo/face.jpg::Howser Kok Junior CS
+https://www6.acu.edu/roster/service/person/jcy11a/photo/face.jpg::Jessica Lin Senior CS
+https://www6.acu.edu/roster/service/person/jrn11a/photo/face.jpg::Jonathan Nix Junior CS
+https://www6.acu.edu/roster/service/person/rsp10a/photo/face.jpg::Raj Patel Senior CS
+https://www6.acu.edu/roster/service/person/jls08c/photo/face.jpg::Jonathan Shouse Senior CS
+https://www6.acu.edu/roster/service/person/acs11e/photo/face.jpg::Adam Starbuck Sophomore CS
+https://www6.acu.edu/roster/service/person/rst09a/photo/face.jpg::Ramsey Towell Senior CS
+https://www6.acu.edu/roster/service/person/eaw09c/photo/face.jpg::Ethan Waddle Senior CS
+https://www6.acu.edu/roster/service/person/bxw10a/photo/face.jpg::Duke Wu Senior CS
+
+
+https://www6.acu.edu/roster/service/person/ewa12a/photo/face.jpg::Evan Ashburn SO DET
+https://www6.acu.edu/roster/service/person/jcc12b/photo/face.jpg::Christian Cheatham SO IT
+https://www6.acu.edu/roster/service/person/arg12c/photo/face.jpg::Austin Graham SO DET
+https://www6.acu.edu/roster/service/person/kmh12c/photo/face.jpg::Kayla Holcomb JR CS
+https://www6.acu.edu/roster/service/person/nml11b/photo/face.jpg::Natalie Lemieux JR IS
+https://www6.acu.edu/roster/service/person/sam12a/photo/face.jpg::Stephen Martin SR IS
+https://www6.acu.edu/roster/service/person/jwm12b/photo/face.jpg::Justin McAlister SO CS
+https://www6.acu.edu/roster/service/person/mfm08a/photo/face.jpg::Max Mills SR CS
+https://www6.acu.edu/roster/service/person/san11a/photo/face.jpg::Steven Nagy JR DET
+https://www6.acu.edu/roster/service/person/arp10d/photo/face.jpg::Allison Phillips SR MKTG
+
+file:///Users/brentnreeves/Documents/data/ACU/student pix/16F_DB1/
+
+-rw-r--r--@  1 brentnreeves  staff   33677 Sep  6 13:41 Alcide Bennett.png
+-rw-r--r--@  1 brentnreeves  staff   33788 Sep  6 13:46 Alec Smith.png
+-rw-r--r--@  1 brentnreeves  staff   37601 Sep  6 13:45 Austin Rain.png
+-rw-r--r--@  1 brentnreeves  staff   36016 Sep  6 13:42 Barrett Corey.png
+-rw-------@  1 brentnreeves  staff  197458 Aug 26 16:56 Beautiful TA.png
+-rw-r--r--@  1 brentnreeves  staff   35056 Sep  6 13:43 Blake Hobby.png
+-rw-r--r--@  1 brentnreeves  staff   36260 Sep  6 13:43 Bret Ellis.png
+-rw-r--r--@  1 brentnreeves  staff   36078 Sep  6 13:46 Charlie Velazquez.png
+-rw-r--r--@  1 brentnreeves  staff   34513 Sep  6 13:43 Christopher Gray.png
+-rw-r--r--@  1 brentnreeves  staff   33993 Sep  6 13:41 Darius Bell.png
+-rw-r--r--@  1 brentnreeves  staff   37563 Sep  6 13:44 Dominic Leong.png
+-rw-r--r--@  1 brentnreeves  staff   37305 Sep  6 13:43 Holt Herndon.png
+-rw-r--r--@  1 brentnreeves  staff   36453 Sep  6 13:44 Isaiah Moore.png
+-rw-r--r--@  1 brentnreeves  staff   36218 Sep  6 13:40 Ivan Anyaegbu.png
+-rw-r--r--@  1 brentnreeves  staff   33103 Sep  6 13:41 Jared Arthurs.png
+-rw-r--r--@  1 brentnreeves  staff   38659 Sep  6 13:42 Joseph Cisneros.png
+-rw-r--r--@  1 brentnreeves  staff   36950 Sep  6 13:46 Josh Troutt.png
+-rw-r--r--@  1 brentnreeves  staff   37496 Sep  6 13:44 Kalir Joseph.png
+-rw-r--r--@  1 brentnreeves  staff   35937 Sep  6 13:46 Kevin Shurtz.png
+-rw-r--r--@  1 brentnreeves  staff   36608 Sep  6 13:45 Kole Peoples.png
+-rw-r--r--@  1 brentnreeves  staff   35838 Sep  6 13:45 Kory Murdock.png
+-rw-r--r--@  1 brentnreeves  staff   37016 Sep  6 13:42 Kyle Carter.png
+-rw-r--r--@  1 brentnreeves  staff   39473 Sep  6 13:46 Kyler Wilks.png
+-rw-r--r--@  1 brentnreeves  staff   35029 Sep  6 13:45 Logan Rollf.png
+-rw-r--r--@  1 brentnreeves  staff   34684 Sep  6 13:42 Matthew Boles.png
+-rw-r--r--@  1 brentnreeves  staff   35335 Sep  6 13:44 Michael Isome.png
+-rw-r--r--@  1 brentnreeves  staff   39103 Sep  6 13:42 Nathan Daniels.png
+-rw-r--r--@  1 brentnreeves  staff   33049 Sep  6 13:45 Nathan Sherrill.png
+-rw-r--r--@  1 brentnreeves  staff   38401 Sep  6 13:47 Sam Willis.png
+-rw-r--r--@  1 brentnreeves  staff   36803 Sep  6 13:42 Sara Coalson.png
+-rw-r--r--@  1 brentnreeves  staff   34747 Sep  6 13:43 Sean Halstead.png
+-rw-r--r--@  1 brentnreeves  staff   33782 Sep  6 13:45 Shawn Rosario.png
+-rw-r--r--@  1 brentnreeves  staff   37869 Sep  6 13:47 Tanner Williams.png
+-rw-r--r--@  1 brentnreeves  staff   36597 Sep  6 13:44 Timothy Miller.png
+-rw-r--r--@  1 brentnreeves  staff   39725 Sep  6 13:47 Tommy Yates.png
+-rw-r--r--@  1 brentnreeves  staff   38569 Sep  6 13:43 Ty Fitch.png
+-rw-r--r--@  1 brentnreeves  staff   37913 Sep  6 13:44 Ty Kelley.png
+
+
+
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/
+
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/10_of_clubs.png::case
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/10_of_diamonds.png::dice
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/10_of_hearts.png::hose
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/10_of_spades.png::sauce
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/2_of_clubs.png::can
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/2_of_diamonds.png::dune
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/2_of_hearts.png::hen
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/2_of_spades.png::sun
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/3_of_clubs.png::comb
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/3_of_diamonds.png::dam
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/3_of_hearts.png::ham
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/3_of_spades.png::sam yosemite
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/4_of_clubs.png::car
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/4_of_diamonds.png::deer
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/4_of_hearts.png::hare
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/4_of_spades.png::seer
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/5_of_clubs.png::coal
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/5_of_diamonds.png::doll
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/5_of_hearts.png::hail
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/5_of_spades.png::sail
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/6_of_clubs.pngcash
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/6_of_diamonds.png::dusche
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/6_of_hearts.png::hash
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/6_of_spades.png::sushi
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/7_of_clubs.png::cock
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/7_of_diamonds.png::duck
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/7_of_hearts.png::hog
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/7_of_spades.png::sock
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/8_of_clubs.png::cave
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/8_of_diamonds.png::dive
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/8_of_hearts.png::hive
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/8_of_spades.png::safe
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/9_of_clubs.png::cop
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/9_of_diamonds.png::debbie
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/9_of_hearts.png::Hope
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/9_of_spades.png::sap
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/ace_of_clubs.png::cat
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/ace_of_diamonds.png::dot
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/ace_of_hearts.png::hat
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/ace_of_spades2.png::suit
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/jack_of_clubs2.png::club
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/jack_of_diamonds2.png::diamond
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/jack_of_hearts2.png::heart
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/jack_of_spades2.png::spade
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/king_of_clubs2.png::King
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/king_of_diamonds2.png::dingy boat
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/king_of_hearts2.png::hinge
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/king_of_spades2.png::swing
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/queen_of_clubs2.png::cream
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/queen_of_diamonds2.png::dream
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/queen_of_hearts2.png::Queen
+file:///Users/brentnreeves/Documents/data/projects_current/flashCards/PNG-cards-1.3/queen_of_spades2.png::steam
+
+
+18S MGMT345
+https://www6.acu.edu/roster/service/person/atb13a/photo/face.jpg::Allison Barkemeyer SR MGMT
+https://www6.acu.edu/roster/service/person/jcc13g/photo/face.jpg::Jason Conway SR MGMT
+https://www6.acu.edu/roster/service/person/jcf14a/photo/face.jpg::Justin Fender JR MGMT
+https://www6.acu.edu/roster/service/person/ibf14a/photo/face.jpg::Brody Fuller SR MGMT
+https://www6.acu.edu/roster/service/person/tjg14f/photo/face.jpg::Taylor Goode JR MGMT
+https://www6.acu.edu/roster/service/person/mrg13d/photo/face.jpg::Michael Guillot SR MGMT
+https://www6.acu.edu/roster/service/person/mkh15a/photo/face.jpg::Marissa Hickson SR MKTG
+https://www6.acu.edu/roster/service/person/lrh14a/photo/face.jpg::Landon Horton JR MGMT
+https://www6.acu.edu/roster/service/person/rxi14a/photo/face.jpg::Rina Iwakami SR MGMT
+https://www6.acu.edu/roster/service/person/nxk13a/photo/face.jpg::Naoko Kiuchi SR MKTG
+https://www6.acu.edu/roster/service/person/lck14a/photo/face.jpg::Lexi Koon SR ACCT
+https://www6.acu.edu/roster/service/person/wxl14a/photo/face.jpg::Cindy Leung JR MGMT
+https://www6.acu.edu/roster/service/person/abl13b/photo/face.jpg::Barrett Lewis SR MGMT
+https://www6.acu.edu/roster/service/person/jml15a/photo/face.jpg::Jaren Lewis JR MGMT
+https://www6.acu.edu/roster/service/person/jly14a/photo/face.jpg::Jolene Liow SR THEA
+https://www6.acu.edu/roster/service/person/bal14c/photo/face.jpg::Bryce Livingston JR MKTG
+https://www6.acu.edu/roster/service/person/dhm14a/photo/face.jpg::Drake McAulay JR MKTG
+https://www6.acu.edu/roster/service/person/itm14a/photo/face.jpg::Ian Miller JR MGMT
+https://www6.acu.edu/roster/service/person/kpm13a/photo/face.jpg::Paige Morris SR MGMT
+https://www6.acu.edu/roster/service/person/lam13a/photo/face.jpg::Lorrie Moya SR MGMT
+https://www6.acu.edu/roster/service/person/cap14d/photo/face.jpg::Camryn Phillips JR MGMT
+https://www6.acu.edu/roster/service/person/jdr14c/photo/face.jpg::James Richards SR MGMT
+https://www6.acu.edu/roster/service/person/bmr15c/photo/face.jpg::Brandon Richmond JR MGMT
+https://www6.acu.edu/roster/service/person/ser14a/photo/face.jpg::Spencer Rod JR MKTG
+https://www6.acu.edu/roster/service/person/gcs14a/photo/face.jpg::Garrett Shannon JR MGMT
+https://www6.acu.edu/roster/service/person/jrs13c/photo/face.jpg::Jonathan Sibert SR MGMT
+https://www6.acu.edu/roster/service/person/ajt14a/photo/face.jpg::Addy Taylor JR MGMT
+https://www6.acu.edu/roster/service/person/jew14a/photo/face.jpg::Jamie Warren JR MGMT
+https://www6.acu.edu/roster/service/person/jrw14a/photo/face.jpg::Justin Watson JR MGMT
+https://www6.acu.edu/roster/service/person/gcy15a/photo/face.jpg::Guan Yu SR MGMT
+
+18S SE1 CS374
+
+https://www6.acu.edu/roster/service/person/tda15a/photo/face.jpg::Troy Adams SO  CS
+https://www6.acu.edu/roster/service/person/jga14a/photo/face.jpg::Jared Arthurs SR  CS
+https://www6.acu.edu/roster/service/person/trb15a/photo/face.jpg::Tiffanie Birrell SR  CS
+https://www6.acu.edu/roster/service/person/cab13e/photo/face.jpg::Collin Blanchard SR  CS
+https://www6.acu.edu/roster/service/person/hab13a/photo/face.jpg::Holly Buff SR  CS
+https://www6.acu.edu/roster/service/person/zmb14a/photo/face.jpg::Zane Burton JR  CS
+https://www6.acu.edu/roster/service/person/rjc14b/photo/face.jpg::Ryan Case SR  DET
+https://www6.acu.edu/roster/service/person/rjc11a/photo/face.jpg::Joseph Cisneros JR  CS
+https://www6.acu.edu/roster/service/person/jmd16a/photo/face.jpg::Joseph Divalentone SO  CS
+https://www6.acu.edu/roster/service/person/crd15b/photo/face.jpg::Cole Duncan SO  CS
+https://www6.acu.edu/roster/service/person/bag16b/photo/face.jpg::Bryce Gattis JR  CS
+https://www6.acu.edu/roster/service/person/jeh15g/photo/face.jpg::Jessica Halbert JR  CS
+https://www6.acu.edu/roster/service/person/smh14h/photo/face.jpg::Sean Halstead JR  CS
+https://www6.acu.edu/roster/service/person/hch15a/photo/face.jpg::Holt Herndon SR  CS
+https://www6.acu.edu/roster/service/person/mji13a/photo/face.jpg::Michael Isome SR  CS
+https://www6.acu.edu/roster/service/person/rwl16a/photo/face.jpg::Ronny Landis Jr. JR  CS
+https://www6.acu.edu/roster/service/person/gbl12a/photo/face.jpg::Gideon Luck SR  CS
+https://www6.acu.edu/roster/service/person/jmm15f/photo/face.jpg::John Marsden JR  CS
+https://www6.acu.edu/roster/service/person/nqm14a/photo/face.jpg::Nnamdi Massally JR  CS
+https://www6.acu.edu/roster/service/person/srm13a/photo/face.jpg::Stephen McGregor SR  CS
+https://www6.acu.edu/roster/service/person/iam13c/photo/face.jpg::Isaiah Moore SR  CS
+https://www6.acu.edu/roster/service/person/ldn15a/photo/face.jpg::Lucas Newton SO  CS
+https://www6.acu.edu/roster/service/person/cbp15a/photo/face.jpg::Christian Parker JR  CS
+https://www6.acu.edu/roster/service/person/kjp14c/photo/face.jpg::Kole Peoples JR  CS
+https://www6.acu.edu/roster/service/person/jdr15a/photo/face.jpg::John Roper JR  CS
+https://www6.acu.edu/roster/service/person/rss12a/photo/face.jpg::Rachael Shudde SR  MATH
+https://www6.acu.edu/roster/service/person/css13c/photo/face.jpg::Connor Smith SR  CS
+https://www6.acu.edu/roster/service/person/rct14b/photo/face.jpg::Robert Towell SR  CS
+https://www6.acu.edu/roster/service/person/mtw14c/photo/face.jpg::Matt Williams SR  CS
+https://www6.acu.edu/roster/service/person/skw13a/photo/face.jpg::Sam Willis SR  DET

@@ -1,0 +1,23 @@
+BLPY,Blowing spray
+RA,Rain
+SN,Snow
+FG,Fog
+BR,Mist
+HZ,Haze
+IC,Ice Crystals
+PL,Ice Pellets
+DS,Dust Storm
+DU,Widespread Dust
+DZ,Drizzle
+FC,Funnel Cloud
++FC,Tornado/Water Spout
+FU,Smoke
+GR,Hail
+GS,Small Hail/Snow Pellets
+PO,Dust/Sand Whirls
+SA,Sand
+SG,Snow Grains
+SQ,Squall
+SS,Sandstorm
+UP,Unknown Precipitation
+VA,Volcanic Ash
